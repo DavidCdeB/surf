@@ -1,3 +1,5 @@
+# Statement
+
 I have two sets `1__scatter_xyz.dat` and `2__scatter_xyz.dat` of scattered points.
 
 These points are defined by 3 coordinates: `x`, `y`, `z`
@@ -23,7 +25,7 @@ The crossing between the surface of `set 1` with the surface of `set 2` will def
 I would like to plot in a 2D `y`-`x`diagram this line / curve that arises from the crossing of both surfaces.
 
 
-__The way I thought on how to attack this problem :__
+# The way I thought on how to attack this problem :
 
 We can define a new function, `w = z_{1} - z_{2}`.
 The crossing between these two surfaces will be the points where `w = (z_{1} - z_{2}) = 0`.
@@ -47,7 +49,7 @@ a) The region where `w = 0` is where both sets coexist together
 
 b) The region where `w \neq 0` is where both sets do not coexist together
 
-__Why I cannot progress with this solution:__
+# Why I cannot progress with this solution:
 
 If we just remove the blank lines on the `.dat` files and sort `x`- wise:
 
