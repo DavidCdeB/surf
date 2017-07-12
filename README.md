@@ -69,9 +69,6 @@ In other words,
 Thus, imagine that I find a point where both surfaces have the same value of `z`.
 This point will be defined by `x_{j}`, `y_{i}^{1}` and `y_{i}^{2}` instead of two unique coordinates. 
 
-More efficient ideas are more than welcome.
-
-
 # A possible solution: 1st step
 
 Because the problem is that the `x` values are not "sampled" at the same points in the two sets,
