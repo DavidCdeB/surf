@@ -73,6 +73,13 @@ This point will be defined by `x_{j}`, `y_{i}^{1}` and `y_{i}^{2}` instead of tw
 More efficient ideas are more than welcome.
 
 
+# A possible solution: 1st step
+
+Because the problem is that the `x` values are not "sampled" at the same points in the two sets,
+I think that what I would need to do is to reconstruct the two 2D functions/surfaces `z_{1}(x,y)` and `z_{2}(x,y)` based on these unevenly spaced points, i.e. interpolate between the measured points. For this we could use the [scipy.interpolate.griddata functionality](https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.interpolate.griddata.html)
+
+In the example posted in that link, I have to use the `np.mgrid` function, where both `x` and `y` have to have the same length. The problem is that, as explained above, this is not the case in this problem.
+
   [1]: https://i.stack.imgur.com/QKwsp.png
   [2]: https://i.stack.imgur.com/sIaQt.png
   [3]: https://i.stack.imgur.com/3Y0Wf.png
