@@ -4,9 +4,11 @@ I have two sets `1__scatter_xyz.dat` and `2__scatter_xyz.dat` of scattered point
 
 These points are defined by 3 coordinates: `x`, `y`, `z`
 
-`1__scatter_xyz.dat` : https://paste.ubuntu.com/25069931/
+`1__scatter_xyz.dat` 
 
-`2__scatter_xyz.dat` : https://paste.ubuntu.com/25069938/
+`2__scatter_xyz.dat` 
+
+(both files are available in this repository)
 
 These two sets of scattered points intersect in a region:
 
