@@ -18,7 +18,7 @@ These two sets of scattered points intersect in a region:
     gnuplot> set ylabel 'y'
     gnuplot> set zlabel 'z'
 
-![Data flow](https://github.com/DavidCdeB/surf/blob/master/Image/surf.png)
+![Data flow](https://github.com/DavidCdeB/surf/blob/master/Images/surf.png)
 
 The crossing between the surface of `set 1` with the surface of `set 2` will define a line / curve, that plotted in a 2D `y`-`x`diagram, will give us the phase boundary between these two sets.
 
@@ -39,7 +39,7 @@ b) A region where `w \neq 0`
 
 If I plot these two values of `w` in a 2D `y`-`x`diagram :
 
-![Data flow](https://github.com/DavidCdeB/surf/blob/master/Image/ppp.png)
+![Data flow](https://github.com/DavidCdeB/surf/blob/master/Images/ppp.png)
 
 I could then define that this line / curve is the phase boundary between these two sets:
 
@@ -64,7 +64,7 @@ However, both sets do not have the same array of `y`s: there is an array `y_{i}^
 
 In other words,
 
-![Data flow](https://github.com/DavidCdeB/surf/blob/master/Image/zz.png)
+![Data flow](https://github.com/DavidCdeB/surf/blob/master/Images/zz.png)
 
 Thus, imagine that I find a point where both surfaces have the same value of `z`.
 This point will be defined by `x_{j}`, `y_{i}^{1}` and `y_{i}^{2}` instead of two unique coordinates. 
