@@ -85,19 +85,20 @@ Based on the range of `y` values for each set:
 
 I can establish a common `y` grid:
 
-```P_initial = 8.0622
-P_end = 10.8535
-number_of_Ps = 100
-
-grid_T, grid_P = np.meshgrid(np.linspace(T_initial, T_end, number_of_Ts), np.linspace(P_initial, P_end, number_of_Ps))```
+    P_initial = 8.0622
+    P_end = 10.8535
+    number_of_Ps = 100
+    
+    grid_T, grid_P = np.meshgrid(np.linspace(T_initial, T_end, number_of_Ts), np.linspace(P_initial, P_end, number_of_Ps))
 
 Now, using `griddata`:
 
-```
+
     grid_Gibbs_solid_1 = griddata(points_solid_1, values_solid_1, (grid_T, grid_P), method='cubic')
     grid_Gibbs_solid_2 = griddata(points_solid_2, values_solid_2, (grid_T, grid_P), method='cubic')
+
     
-```
+
 
 
 To see the rest of the code:
@@ -105,3 +106,8 @@ To see the rest of the code:
 * `cd` to the working directory 
 * Get the code: `git clone https://github.com/DavidCdeB/surf`
 * Run `G_grid_inter.py`. This is my attemp so far
+
+
+
+
+
