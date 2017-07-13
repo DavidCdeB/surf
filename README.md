@@ -93,10 +93,11 @@ grid_T, grid_P = np.meshgrid(np.linspace(T_initial, T_end, number_of_Ts), np.lin
 
 Now, using `griddata`:
 
+```
     grid_Gibbs_solid_1 = griddata(points_solid_1, values_solid_1, (grid_T, grid_P), method='cubic')
     grid_Gibbs_solid_2 = griddata(points_solid_2, values_solid_2, (grid_T, grid_P), method='cubic')
     
--------------------------------------------------------------------------------------------------------
+```
 
 To see the rest of the code:
 
