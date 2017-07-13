@@ -76,7 +76,7 @@ I think that what I would need to do is to reconstruct the two 2D functions/surf
 
 In the example posted in that link, I have to use the `np.mgrid` function, where both `x` and `y` have to have the same length. The problem is that, as explained above, this is not the case.
 
-# Code:
+# Code based on [scipy's `griddata`:](https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.interpolate.griddata.html): 
 
 * `cd` to the working directory 
 * Get the code: `git clone https://github.com/DavidCdeB/surf`
