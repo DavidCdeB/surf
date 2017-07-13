@@ -76,7 +76,20 @@ I think that what I would need to do is to reconstruct the two 2D functions/surf
 
 In the example posted in that link, I have to use the `np.mgrid` function, where both `x` and `y` have to have the same length. The problem is that, as explained above, this is not the case.
 
+
 # Code based on [scipy's `griddata`](https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.interpolate.griddata.html): 
+
+Based on the range of `y` values for each set:
+
+![Data flow](https://github.com/DavidCdeB/surf/blob/master/Images/ranges_z_notation.png)
+
+I can establish a common `y` grid:
+
+```P_initial = 8.0622
+P_end = 10.8535
+number_of_Ps = 100
+
+grid_T, grid_P = np.meshgrid(np.linspace(T_initial, T_end, number_of_Ts), np.linspace(P_initial, P_end, number_of_Ps))```
 
 * `cd` to the working directory 
 * Get the code: `git clone https://github.com/DavidCdeB/surf`
