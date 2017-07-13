@@ -81,7 +81,7 @@ In the example posted in that link, I have to use the `np.mgrid` function, where
 
 Based on the range of `y` values for each set:
 
-![Data flow](https://github.com/DavidCdeB/surf/blob/master/Images/y_values.png)
+![Data flow](https://github.com/DavidCdeB/surf/blob/master/Images/sets_y.png)
 
 I can establish a common `y` grid:
 
