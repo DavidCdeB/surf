@@ -50,7 +50,7 @@ b) The region where `w \neq 0` is where both sets do not coexist together
 
 # Why I cannot progress with this solution
 
-If we just remove the blank lines on the `.dat` files and sort `x`- wise:
+If we just remove the blank lines on the `.dat` files and sort `y`- wise:
 
     sed '/^\s*$/d' 1__scatter_xyz.dat | grep -v "^#" | sort -k1 -n > 1__scatter_xyz_sort_y_wise.dat
     
