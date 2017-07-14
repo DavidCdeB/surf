@@ -14,9 +14,9 @@ These two sets of scattered points intersect in a region:
 
     gnuplot>  splot "1__scatter_xyz.dat" using 3:1:2 with points lt 1 title "1", "2__scatter_xyz.dat" using 3:1:2 with points lt 1 lc 2 title "2"
     
-    gnuplot> set xlabel 'x'
-    gnuplot> set ylabel 'y'
-    gnuplot> set zlabel 'z'
+    gnuplot> set xlabel 'x = Temperature (K)'
+    gnuplot> set ylabel 'y = Pressure (GPa)'
+    gnuplot> set zlabel 'z = Gibbs free energy / formula unit'
 
 ![Data flow](https://github.com/DavidCdeB/surf/blob/master/Images/surf.png)
 
@@ -52,11 +52,11 @@ b) The region where `w \neq 0` is where both sets do not coexist together
 
 If we just remove the blank lines on the `.dat` files and sort `x`- wise:
 
-    sed '/^\s*$/d' 1__scatter_xyz.dat | grep -v "^#" | sort -k1 -n > 1__scatter_xyz_sort_x_wise.dat
+    sed '/^\s*$/d' 1__scatter_xyz.dat | grep -v "^#" | sort -k1 -n > 1__scatter_xyz_sort_y_wise.dat
     
-    sed '/^\s*$/d' 2__scatter_xyz.dat | grep -v "^#" | sort -k1 -n > 2__scatter_xyz_sort_x_wise.dat
+    sed '/^\s*$/d' 2__scatter_xyz.dat | grep -v "^#" | sort -k1 -n > 2__scatter_xyz_sort_y_wise.dat
 
-If you look at both `x_wise.dat` files, there is overlapping data:
+If you look at both `y_wise.dat` files, there is overlapping data:
 `set 1` goes from a `y` of -4.41 to 10.85, and `set 2` goes from 8.06 to 17.64. The array of `y` is different on both sets. However, the array of `x` is the same: from 10 to 2000 with a step of 20.1.
 
 Thus, set 1 and set 2 have the same array of `x_{j}`: from 10 to 2000 in a step of 20.1.
