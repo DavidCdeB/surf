@@ -15,8 +15,11 @@ def func(X, a0, a1, a2, a3, a4, a5):
      return a0 + a1*y + a2*x + a3*y**2 + a4*x**2  + a5*x*y 
 
 # Load data:
-y_data, z_data, x_data  = np.loadtxt('/home/david/Trabajo/structures/SCRIPT_ON_ALL_THE_PHASES/Calcite_I_over_17_volumes/solid_1__xyz_sorted_as_P_wise.dat').T
-y_data_2, z_data_2, x_data_2  = np.loadtxt('/home/david/Trabajo/structures/SCRIPT_ON_ALL_THE_PHASES/Calcite_II_correct_description_including_trapped_Calcite_II_from_V_233_further/clean/solid_1__xyz_sorted_as_P_wise.dat').T
+#y_data, z_data, x_data  = np.loadtxt('/home/david/Trabajo/structures/SCRIPT_ON_ALL_THE_PHASES/Calcite_I_over_17_volumes/solid_1__xyz_sorted_as_P_wise.dat').T
+y_data, z_data, x_data  = np.loadtxt('./solid_1__xyz_sorted_as_P_wise.dat').T
+
+#y_data_2, z_data_2, x_data_2  = np.loadtxt('/home/david/Trabajo/structures/SCRIPT_ON_ALL_THE_PHASES/Calcite_II_correct_description/solid_1__xyz_sorted_as_P_wise.dat').T
+y_data_2, z_data_2, x_data_2  = np.loadtxt('./solid_2__xyz_sorted_as_P_wise.dat').T
 
 # Calling non linear curve_fit
 popt, pcov = curve_fit(func, (x_data, y_data), z_data) 
@@ -170,6 +173,53 @@ ax.scatter(x_data_2, y_data_2, z_data_2, '^s') #color='r', marker='o')
 ax.set_xlabel('T (K)')
 ax.set_ylabel('P (GPa)')
 ax.set_zlabel('\nGibbs free energy / F.unit (a.u.)', linespacing=3)
+
+# In a new figure, each surface separately:
+# set "fig" and "ax" varaibles
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+
+# If you set "classic", use also this, 
+# in order to capture z-labels right:
+#z_formatter = matplotlib.ticker.ScalarFormatter(useOffset=False)
+#ax.zaxis.set_major_formatter(z_formatter)
+
+# Plot the original function
+ax.plot_surface(xx, yy, z_fit, color='y', alpha=0.5)
+
+# Plot the initial scattered points
+ax.scatter(x_data, y_data, z_data, color='r', marker='o') # 'ro') #color='r', marker='o')
+
+
+ax.set_xlabel('T (K)')
+ax.set_ylabel('P (GPa)')
+ax.set_zlabel('\nGibbs free energy / F.unit (a.u.)', linespacing=3)
+ax.set_title('\n\nCalcite I', linespacing=3)
+
+# In a new figure, each surface separately:
+# set "fig" and "ax" varaibles
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+
+# If you set "classic", use also this, 
+# in order to capture z-labels right:
+#z_formatter = matplotlib.ticker.ScalarFormatter(useOffset=False)
+#ax.zaxis.set_major_formatter(z_formatter)
+
+# Plot the original function
+ax.plot_surface(xx_2, yy_2, z_fit_2, color='g', alpha=0.5)
+
+# Plot the initial scattered points
+ax.scatter(x_data_2, y_data_2, z_data_2, '^s') #color='r', marker='o')
+
+
+ax.set_xlabel('T (K)')
+ax.set_ylabel('P (GPa)')
+ax.set_zlabel('\nGibbs free energy / F.unit (a.u.)', linespacing=3)
+ax.set_title('\n\nCalcite II', linespacing=3)
+
+
+
 
 # New figure for the y=y(x) function:
 fig = plt.figure()
