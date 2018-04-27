@@ -4,7 +4,7 @@ import sys
 import matplotlib.pyplot as plt
 #from scipy.interpolate import griddata
 from scipy.optimize import curve_fit
-
+#hell yeah
 def func(y, a0, a1, a2):
      return a0 + a1 * y + a2*y**2 
 
